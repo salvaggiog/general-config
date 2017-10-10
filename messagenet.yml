@@ -1,0 +1,27 @@
+server:
+   port: 8093
+   contextPath: /messagenet
+
+eureka:
+  instance:
+      preferIpAddress: true
+  client:
+    serviceUrl:
+      defaultZone: http://10.2.1.141:8761/eureka/
+
+# The OAuth2 server definition that would be used to send the authorization requests to
+authserver:
+    hostname: auth.indiana.local
+    port: 8899
+    contextPath: userauth
+
+# Note that the "/user" endpoint needs to provide the principle of the logged in user (/me endpoint)
+spring:
+  oauth2:
+    resource: 
+      userInfoUri: http://${authserver.hostname}:${authserver.port}/${authserver.contextPath}/me
+      preferTokenInfo: false
+    client:
+      accessTokenUri: http://${authserver.hostname}:${authserver.port}/${authserver.contextPath}/oauth/token
+      userAuthorizationUri: http://${authserver.hostname}:${authserver.port}/${authserver.contextPath}/oauth/authorize
+      clientId: clientapp
