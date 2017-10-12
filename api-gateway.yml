@@ -49,7 +49,7 @@ zuul:
       serviceId: gofiliate
       stripPrefix: false
     seamless-gameart:
-      path: /gameart/**
+      path: /seamless-gameart/**
       serviceId: seamless-gameart
       stripPrefix: false
     seamless-f1x2:
