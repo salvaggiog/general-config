@@ -1,6 +1,6 @@
 server:
   port: 8084
-  contextPath: /gameart
+  contextPath: /seamless-gameart
 
 security:
   basic:
