@@ -19,7 +19,7 @@ spring:
   datasource:
     url: jdbc:mysql://10.2.2.211:3306/core_indiana_reticulum
     username: reticindiana
-	password: 1nd1Ana!01
+    password: 1nd1Ana!01
     driver-class: com.mysql.jdbc.Driver
     testOnBorrow: true
     validationQuery: SELECT 1
